@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MenuNavbarComponent } from './menu-navbar/menu-navbar.component';
 import { PaginaMuroComponent } from './pagina-muro/pagina-muro.component';
-
+import { ImageListComponent } from './image-list/image-list.component';
+import { ImageServiceService} from './image-service.service'
 
 const appRoutes: Routes = [
   {
@@ -17,14 +19,16 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MenuNavbarComponent,
-    PaginaMuroComponent
+    PaginaMuroComponent,
+    ImageListComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    HttpModule
 
   ],
-  providers: [],
+  providers: [ImageServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
