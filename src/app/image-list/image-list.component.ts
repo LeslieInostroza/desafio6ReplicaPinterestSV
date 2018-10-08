@@ -29,9 +29,7 @@ export class ImageListComponent implements OnInit {
     return this.imageService.getImage(query).subscribe(
       data => this.handleSuccess(data),
       error => this.handleError(error),
-      () => this.searching = false
-      
-      
+      () => this.searching = false 
     )
   }
 

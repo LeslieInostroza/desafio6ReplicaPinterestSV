@@ -1,27 +1,45 @@
-<nav class="navbar sticky-top bg-custom fixed">
-    <a href="#">
+<body>
+  <div>
+    <nav class="navbar sticky-top bg-custom fixed">
+      <a href="#">
         <i class="fab fa-pinterest icon-pinterest"></i>
-    </a>
+      </a>
       <span id="search-btn" class="search-icon-header px-3">
-     <i class="fas fa-search" (click) ="searchImages(searchQuery)"></i>
+        <i class="fas fa-search" (click) ="searchImages(searchQuery)"></i>
       </span>
-     <input class="searchInput" [(ngModel)] ="searchQuery" placeholder="Buscar" aria-label="Search">
-    <a class="btn-header1 px-3 Inicio-btn" href="#">Inicio</a>
-    <a class="btn-header1 px-3" href="#">Siguiendo</a>
-    <a class="btn-header1 px-3" href="#"><i class="far fa-user-circle icon-header pr-2"></i>Leslie</a>
-    <a class="btn-header px-3 iconos" href="#"><i class="fas fa-comment-dots icon-header"></i></a>
-    <a class="btn-header px-3 iconos" href="#"><i class="fas fa-bell icon-header"></i></a>
-    <a class="btn-header px-3 iconos" href="#"><i class="fas fa-ellipsis-h icon-header"></i></a>
-  </nav>
-  
-<!--  <input class="search" [(ngModel)] ="searchQuery" placeholder="Search for images"> 
- <button (click) ="searchImages(searchQuery)" type="button"> Find Images</button> --> 
- <p *ngIf="searching">Fetching data...</p>
-<div *ngFor="let image of images" class="image-container">
-  <a href="{{ image.pageURL }}" target="_bank">hola</a>
-  <img src="{{image.webformatURL}}" alt="">
-  <p>Tags: {{image.tags}}</p>
-  <p>User: {{image.user}}</p>
-  <p>Comments: {{image.comments}}</p>
-  <p>Likes: {{image.likes}}</p>
-</div>
+      <input class="searchInput" [(ngModel)] ="searchQuery" placeholder="Buscar" aria-label="Search">
+      <a class="btn-header1 px-3 Inicio-btn" href="#">Inicio</a>
+      <a class="btn-header1 px-3" href="#">Siguiendo</a>
+      <a class="btn-header1 px-3" href="#"><i class="far fa-user-circle icon-header pr-2"></i>Leslie</a>
+      <a class="btn-header px-3 iconos" href="#"><i class="fas fa-comment-dots icon-header"></i></a>
+      <a class="btn-header px-3 iconos" href="#"><i class="fas fa-bell icon-header"></i></a>
+      <a class="btn-header px-3 iconos" href="#"><i class="fas fa-ellipsis-h icon-header"></i></a>
+    </nav>
+  </div>
+
+  <div class="conteiner-fluid">
+      <p *ngIf="searching">Fetching data...</p>
+    <div class="images" *ngFor="let image of images">
+      <div class="col-4">
+          <img src="{{image.webformatURL}}" alt="">
+<!--           <a href="{{ image.pageURL }}" target="_bank">{{image.pageURL}}</a>
+          <p>Tags: {{image.tags}}</p>
+          <p>User: {{image.user}}</p>
+          <p>Comments: {{image.comments}}</p>
+          <p>Likes: {{image.likes}}</p> -->
+      </div>
+    </div>
+  </div>
+</body>
+      
+    <!--  <input class="search" [(ngModel)] ="searchQuery" placeholder="Search for images"> 
+     <button (click) ="searchImages(searchQuery)" type="button"> Find Images</button> --> 
+    <!--  <p *ngIf="searching">Fetching data...</p>
+    <div *ngFor="let image of images" class="image-container">
+      <a href="{{ image.pageURL }}" target="_bank">{{image.pageURL}}</a>
+      <img src="{{image.webformatURL}}" alt="">
+      <p>Tags: {{image.tags}}</p>
+      <p>User: {{image.user}}</p>
+      <p>Comments: {{image.comments}}</p>
+      <p>Likes: {{image.likes}}</p>
+    </div> -->

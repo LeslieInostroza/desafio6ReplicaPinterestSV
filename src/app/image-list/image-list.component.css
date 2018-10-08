@@ -12,7 +12,6 @@ body {
   background-color: #fff;
   border-bottom: 1px solid #efefef;
   position: sticky;
-  z-index: 9999;
 }
 .icon-pinterest {
   height: 46px;
@@ -94,6 +93,12 @@ body {
 }
 .fixed {
   position: fixed;
-  top: 0;
+  top: 0%;
   width: 100%;
+}
+.images{
+  float: left;
+}
+img{
+  width: 50vh;
 }
