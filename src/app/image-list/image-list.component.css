@@ -118,9 +118,9 @@ body {
   margin: 5px;
   border-radius: 5%;
 }
-.card:hover{
+/* .card:hover{
  background-color: #8e8e8e57; 
-}
+} */
 #btnImg{
   display: none;
   background-color: #efefef;
@@ -129,6 +129,9 @@ body {
   color:#6c6c6c;
   font-weight: 500;
   width: 255px;
+  position: relative;
+  bottom: 60px;
+  left: 5px;
 }
 .card:hover > #btnImg{
   display: block;   
@@ -139,7 +142,11 @@ body {
   color:white;
   border-radius: 7%;
   font-weight: 600;
-  border:none; 
+  border:none;
+  position: relative;
+  left: 230px;
+  /* top: 5px; */
+  bottom: 160px;
 }
 .card:hover > #save{
   display:block;
@@ -147,4 +154,5 @@ body {
 .puntos{
   border-radius: 50%;
   border: none;
+  background-color: transparent;
 }
