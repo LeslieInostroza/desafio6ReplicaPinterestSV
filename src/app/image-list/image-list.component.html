@@ -19,13 +19,19 @@
     </nav>
   </div>
 
+  <div class="diseñoTags">
+      <div *ngFor="let image of images">
+          <button class="tags">{{image.tags}}</button>
+    </div>
+  </div>
+
 
   <div class="diseño">
-    <p *ngIf="searching">Fetching data...</p>
+    <p *ngIf="searching">Loading...</p>
     <div *ngFor="let image of images" class="card" style="width: 18rem;">
       <img class="imgsearch"src="{{ image.webformatURL}}">
-      <button id="save"><i class="fas fa-thumbtack"></i> Save</button>
-      <a href="{{ image.pageURL }}"id="btnImg" target="_bank"><i class="fas fa-arrow-up"></i>{{image.pageURL}}</a> 
+      <button id="save"><i class="fas fa-thumbtack"></i> Guardar</button>
+      <a href="{{ image.pageURL }}"id="btnImg" target="_bank"><i class="fas fa-location-arrow"></i>{{image.pageURL}}</a> 
       <button class="puntos"><i class="fas fa-ellipsis-h icon-header"></i></button> 
     </div>
   </div>
