@@ -4,10 +4,12 @@
       <a href="#">
         <i class="fab fa-pinterest icon-pinterest"></i>
       </a>
-      <span id="search-btn" class="search-icon-header px-3">
-        <i class="fas fa-search" (click) ="searchImages(searchQuery)"></i>
+      <div  class="form-inline search-header my-2 my-lg-0 mx-3">
+      <span id="search-btn" class="search-icon-header px-3" (click) ="searchImages(searchQuery)">
+        <i class="fas fa-search"></i>
       </span>
       <input class="searchInput" [(ngModel)] ="searchQuery" placeholder="Buscar" aria-label="Search">
+      </div>
       <a class="btn-header1 px-3 Inicio-btn" href="#">Inicio</a>
       <a class="btn-header1 px-3" href="#">Siguiendo</a>
       <a class="btn-header1 px-3" href="#"><i class="far fa-user-circle icon-header pr-2"></i>Leslie</a>
@@ -17,17 +19,14 @@
     </nav>
   </div>
 
-  <div class="conteiner-fluid">
-      <p *ngIf="searching">Fetching data...</p>
-    <div class="images" *ngFor="let image of images">
-      <div class="col-4">
-          <img src="{{image.webformatURL}}" alt="">
-<!--           <a href="{{ image.pageURL }}" target="_bank">{{image.pageURL}}</a>
-          <p>Tags: {{image.tags}}</p>
-          <p>User: {{image.user}}</p>
-          <p>Comments: {{image.comments}}</p>
-          <p>Likes: {{image.likes}}</p> -->
-      </div>
+
+  <div class="diseño">
+    <p *ngIf="searching">Fetching data...</p>
+    <div *ngFor="let image of images" class="card" style="width: 18rem;">
+      <img class="imgsearch"src="{{ image.webformatURL}}">
+      <button id="save"><i class="fas fa-thumbtack"></i> Save</button>
+      <a href="{{ image.pageURL }}"id="btnImg" target="_bank"><i class="fas fa-arrow-up"></i>{{image.pageURL}}</a> 
+      <button class="puntos"><i class="fas fa-ellipsis-h icon-header"></i></button> 
     </div>
   </div>
 </body>

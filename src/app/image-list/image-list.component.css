@@ -39,7 +39,7 @@ body {
 .searchInput {
   width: 750px;
   height: 40px;
-  background-color: transparent;
+  background-color:transparent;
   border: none;
   color: #8e8e8e;
   font-size: 16px;
@@ -96,9 +96,55 @@ body {
   top: 0%;
   width: 100%;
 }
-.images{
-  float: left;
+
+ .diseño{
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-img{
-  width: 50vh;
+
+.imgsearch{
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
+}
+.imgsearch:hover{
+  color: #8e8e8ee0;
+  opacity: 0.3;
+}
+.card{
+  display: block;
+  width: 200px;
+  float: left;
+  margin: 5px;
+  border-radius: 5%;
+}
+.card:hover{
+ background-color: #8e8e8e57; 
+}
+#btnImg{
+  display: none;
+  background-color: #efefef;
+  border-radius: 7%;
+  border:none;
+  color:#6c6c6c;
+  font-weight: 500;
+  width: 255px;
+}
+.card:hover > #btnImg{
+  display: block;   
+}
+#save{
+  display: none;
+  background-color:#ad081b;
+  color:white;
+  border-radius: 7%;
+  font-weight: 600;
+  border:none; 
+}
+.card:hover > #save{
+  display:block;
+}
+.puntos{
+  border-radius: 50%;
+  border: none;
 }
