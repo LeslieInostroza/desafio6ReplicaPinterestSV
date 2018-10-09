@@ -10,3 +10,4 @@ A raíz del proceso de postulacion a la empresa Silicon Valley, desarrolle el de
 * Debe incluir pruebas unitarias.
 
 Para llevar a cabo este desafio, la interfaz web, se ha desarrollado con Angular 6
+[Link Deploy PinterestReplica](https://leslieinostroza.github.io/desafio6ReplicaPinterestSV/)
