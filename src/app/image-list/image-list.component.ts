@@ -11,6 +11,7 @@ export class ImageListComponent implements OnInit {
   images: any[];
   imagesFound: boolean = false;
   searching: boolean = false;
+  searchQuery: any;
 
   handleSuccess(data){
     this.imagesFound = true;
